@@ -12,9 +12,14 @@ import { AuthenticationComponent } from "./auth/components/authentication";
 import { HeaderComponent } from "../header.component";
 import { routing } from "../app.routing";
 import { LogoutComponent } from "./auth/components/logout";
-import { SignupComponent } from "./auth/components/signup";
+import { SignupComponent } from "./deleted/signup";
 import { SigninComponent } from "./auth/components/signin";
 import {AuthService} from "./auth/auth.service";
+import {ErrorComponent} from "../errors/error.component";
+import {ErrorService} from "../errors/error-service";
+import {WelcomeService} from "./welcome/welcome.service";
+import {WelcomeComponent} from "./welcome/welcome.component";
+import {ModalModule} from "ng2-bootstrap";
 
 @NgModule({
     declarations: [
@@ -27,18 +32,22 @@ import {AuthService} from "./auth/auth.service";
         HeaderComponent,
         LogoutComponent,
         SignupComponent,
-        SigninComponent
-
+        SigninComponent,
+        ErrorComponent,
+        WelcomeComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         routing,
         ReactiveFormsModule,
-        HttpModule
+        HttpModule,
+        ModalModule,
     ],
     providers: [
-        AuthService
+        WelcomeService,
+        AuthService,
+        ErrorService
     ],
     bootstrap: [
         AppComponent

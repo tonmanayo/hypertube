@@ -2,8 +2,8 @@ import {Component} from "@angular/core";
 import {FormGroup, FormControl, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 
-import {User} from "../user";
-import {AuthService} from "../auth.service";
+import {User} from "../../auth/user";
+import {AuthService} from "../../auth/auth.service";
 
 @Component({
     selector: 'app-signin',
@@ -12,6 +12,7 @@ import {AuthService} from "../auth.service";
 
 export class SigninComponent {
     myForm: FormGroup;
+    display = 'none';
     constructor(private authService: AuthService, private router: Router) {}
     onSubmit(){
         const user = new User(this.myForm.value.email, this.myForm.value.password);
@@ -25,6 +26,14 @@ export class SigninComponent {
                 error => console.error(error)
             );
         this.myForm.reset();
+    }
+
+    onSignIn() {
+        this.display = 'block';
+    }
+
+    onClose() {
+        this.display = 'none';
     }
 
     ngOnInit(){

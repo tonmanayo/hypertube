@@ -1,5 +1,5 @@
 import { Routes } from "@angular/router"
-import {SignupComponent} from "./components/signup";
+import {SignupComponent} from "../deleted/signup";
 import {SigninComponent} from "./components/signin";
 import {LogoutComponent} from "./components/logout";
 

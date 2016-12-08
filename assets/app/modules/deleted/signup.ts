@@ -1,8 +1,8 @@
-import {Component, OnInit} from "@angular/core";
-import {FormGroup, FormControl, Validators} from "@angular/forms";
+import { Component, OnInit } from "@angular/core";
+import { FormGroup, FormControl, Validators } from "@angular/forms";
 
-import {AuthService} from "../auth.service";
-import {User} from "../user";
+import { AuthService } from "../auth/auth.service";
+import { User} from "../auth/user";
 @Component({
     selector: 'app-signup',
     templateUrl: './signup.html'
