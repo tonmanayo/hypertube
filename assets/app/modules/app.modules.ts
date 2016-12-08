@@ -16,7 +16,7 @@ import { SignupComponent } from "./deleted/signup";
 import { SigninComponent } from "./auth/components/signin";
 import {AuthService} from "./auth/auth.service";
 import {ErrorComponent} from "../errors/error.component";
-import {ErrorService} from "../errors/error-service";
+import {ErrorService} from "../errors/error.service";
 import {WelcomeService} from "./welcome/welcome.service";
 import {WelcomeComponent} from "./welcome/welcome.component";
 import {ModalModule} from "ng2-bootstrap";

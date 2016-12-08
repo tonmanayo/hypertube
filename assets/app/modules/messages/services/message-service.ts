@@ -3,7 +3,7 @@ import {Injectable, EventEmitter} from "@angular/core";
 import 'rxjs/Rx';
 import {Observable} from "rxjs";
 import {Message} from "../message";
-import {ErrorService} from "../../../errors/error-service";
+import {ErrorService} from "../../../errors/error.service";
 
 @Injectable()
 export class MessageService {
