@@ -1,12 +1,12 @@
 import {Routes, RouterModule} from "@angular/router";
-import {MessagesComponent} from "./modules/messages/components/messages";
-import {AuthenticationComponent} from "./modules/auth/components/authentication";
-import {AUTH_ROUTES} from "./modules/auth/auth.routes";
-import {WelcomeComponent} from "./modules/welcome/welcome.component";
+import {MessagesComponent} from "./messages/components/messages";
+import {AuthenticationComponent} from "./auth/components/authentication";
+import {AUTH_ROUTES} from "./auth/auth.routes";
+import {IndexComponent} from "./index/index.component";
 
 const APP_ROUTES: Routes = [
-    { path: '', redirectTo: '/messages', pathMatch: 'full' },
-    { path: 'welcome', component: WelcomeComponent },
+    { path: '', redirectTo: 'index', pathMatch: 'full' },
+    { path: 'index', component: IndexComponent },
     { path: 'messages', component: MessagesComponent },
     { path: 'auth', component: AuthenticationComponent, children: AUTH_ROUTES }
 ];

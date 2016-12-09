@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 
 var appRoutes = require('./routes/app');
 var messageRoutes = require('./routes/messages');
-var welcomeRoutes = require('./routes/welcome');
+var indexRoutes = require('./routes/index');
 var userRoutes = require('./routes/user');
 
 var app = express();
@@ -31,7 +31,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use('/welcome', welcomeRoutes);
+app.use('/index', indexRoutes );
 app.use('/message', messageRoutes);
 app.use('/user', userRoutes);
 app.use('/', appRoutes);
