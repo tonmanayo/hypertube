@@ -21,6 +21,7 @@ import {ErrorService} from "./errors/error.service";
 import {IndexComponent} from "./index/index.component";
 import {ModalModule} from "ng2-bootstrap";
 import {SignupComponent} from "./auth/components/signup";
+import {IndexService} from "./index/index.service";
 
 @NgModule({
     declarations: [
@@ -46,9 +47,9 @@ import {SignupComponent} from "./auth/components/signup";
         ModalModule,
     ],
     providers: [
-    //    WelcomeService,
         AuthService,
-        ErrorService
+        ErrorService,
+        IndexService
     ],
     bootstrap: [
         AppComponent

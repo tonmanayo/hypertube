@@ -6,4 +6,22 @@ import {Component, } from "@angular/core";
     styleUrls: ['./index.component.css']
 })
 
-export class IndexComponent {}
+export class IndexComponent {
+    displayL = false;
+    displayS = false;
+
+    constructor(){
+        this.displayL = false;
+        this.displayS = false;
+    }
+
+    fShowL(){
+        this.displayL = true;
+    };
+    fShowS(){
+        this.displayS = true;
+    }
+    fClose(){
+        this.displayL = false;
+    }
+}

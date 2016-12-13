@@ -284,7 +284,7 @@ section.wrapper article header, article.wrapper article header {
 /* Footer */
 
 #footer {
-    padding: 6em 0;
+    padding: 3em 0;
     background: #6cc091;
     color: #fff;
     text-align: center;
@@ -342,6 +342,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    padding: 5px;
     display: block;
 }
 
@@ -368,11 +369,7 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 /* Button */
 
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button,
-.button {
+.button-new {
     -moz-appearance: none;
     -webkit-appearance: none;
     -ms-appearance: none;
@@ -383,7 +380,7 @@ button,
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     background-color: transparent;
     box-shadow: inset 0 0 0 3px #6cc091;
-    color: #6cc091 !important;
+    color: #6cc091 ;
     border-radius: 30px;
     border: 0;
     cursor: pointer;
@@ -398,6 +395,7 @@ button,
     text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
+
 }
 
 input[type="submit"]:hover,
@@ -535,13 +533,104 @@ button:disabled,
 
 @media screen and (max-width: 480px) {
 
-    input[type="submit"],
-    input[type="reset"],
-    input[type="button"],
-    button,
-    .button {
+    .button-new {
         padding: 0;
         width: 100%;
     }
 
+}
+
+/* Image */
+
+.image {
+    border-radius: 0;
+    border: 0;
+    display: inline-block;
+    position: relative;
+}
+
+.image img {
+    border-radius: 0;
+    display: block;
+}
+
+
+.image.round img {
+    margin-top: 30px;
+    width: 100%;
+    height: 40vh;
+    padding: 1vh;
+}
+
+/* modal */
+
+.backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity .3s cubic-bezier(0.04, 0.74, 0.29, 1.99);
+}
+
+.show {
+    opacity: 1;
+}
+
+
+.modal-dialog {
+    margin: 0 auto;
+    margin-top: 30%;
+    transition: opacity .3s cubic-bezier(0.04, 0.74, 0.29, 1.99);
+
+}
+.modal-content {
+    z-index: 999999;
+}
+
+
+.white{
+    color:#000;
+    background-color:#fff;
+}
+
+.btn-facebook {
+    color: #ffffff;
+    -webkit-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #2b4b90;
+    *background-color: #133783;
+    background-image: -moz-linear-gradient(top, #3b5998, #133783);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3b5998), to(#133783));
+    background-image: -webkit-linear-gradient(top, #3b5998, #133783);
+    background-image: -o-linear-gradient(top, #3b5998, #133783);
+    background-image: linear-gradient(to bottom, #3b5998, #133783);
+    background-repeat: repeat-x;
+    border-color: #133783 #133783 #091b40 !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3b5998', endColorstr='#ff133783', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.btn-facebook.disabled,
+.btn-facebook[disabled] {
+    color: #ffffff;
+    background-color: #133783 !important;
+    *background-color: #102e6d !important;
+}
+
+.btn-facebook:active,
+.btn-facebook.active {
+    background-color: #0d2456 \9 !important;
+}
+
+.panel {
+    padding-left: 15vh;
+    text-align:  center;
 }
