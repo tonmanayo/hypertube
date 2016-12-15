@@ -1,58 +1,7 @@
-
-
-<div class="backdrop" [ngClass]="{'show' : displayL}"></div>
-<div class="modal"  role="dialog" [ngClass]="{'show' : displayL}">
-    <div class="modal-dialog" role="document"  [ngClass]="{'show' : displayL}">
-        <div class="modal-content"  >
-            <div class="modal-header">
-                <button type="button" class="close" (click)="fClose()"  aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="container" style="margin-bottom: 1vh">
-                    <div class="row">
-                        <div class="col-md-4 col-md-offset-4">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Enter Login Details</h3>
-                                </div>
-                                <div class="panel-body">
-                                    <form accept-charset="UTF-8" role="form">
-                                        <fieldset>
-                                            <div class="form-group">
-                                                <input class="form-control" placeholder="yourmail@example.com" name="email" type="text">
-                                            </div>
-                                            <div class="form-group">
-                                                <input class="form-control" placeholder="Password" name="password" type="password" value="">
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input name="remember" type="checkbox" value="Remember Me"> Remember Me
-                                                </label>
-                                            </div>
-                                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
-                                        </fieldset>
-                                    </form>
-                                    <h4>OR</h4>
-                                    <input class="btn btn-lg btn-facebook btn-block" type="submit" value="Login via facebook">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
+<app-login>     </app-login>
+<app-signup>    </app-signup>
 <!-- Banner -->
 <section id="banner">
-
-
 
     <div class="inner">
         <header>
@@ -60,25 +9,22 @@
         </header>
 
         <div class="flex ">
-
             <div>
                 <span class="icon fa-address-book"></span>
                 <h3 style="padding-top: 20px">SignUp</h3>
                 <p>Stream and Download 1000+ Series and Movies</p>
             </div>
-
             <div>
                 <span class="icon fa-youtube-play "></span>
                 <h3 style="padding-top: 20px">Stream</h3>
                 <p>Stream your Movie/Series Instantly!</p>
             </div>
-
-
-
         </div>
-            <a (click)="fShowL()" class="button-new">Login</a>
-            <a (click)="fShowS()" class="button-new">Signup</a>
+       <div id="btn-div">
+           <a (click)="fShowL()" class="button-new">Login</a>
+           <a (click)="fShowS()" class="button-new">Signup</a>
         </div>
+    </div>
 </section>
 
 <section id="three" class="wrapper align-center">
@@ -86,26 +32,30 @@
         <div class="flex flex-2">
             <article>
                 <div class="image round">
-                    <img src="https://getpopcorntime.org/wp-content/uploads/2015/02/download-popcorn-time.png" alt="Pic 01" />
+                    <img src="https://getpopcorntime.org/wp-content/uploads/2015/02/download-popcorn-time.png"
+                         alt="Pic 01"/>
                 </div>
                 <header>
                     <h3 style="text-align: center ">Our App</h3>
                 </header>
-                <p>Search and stream using an easy to use graphical user interface, there are 1000+ series and movies to choose from</p>
+                <p>Search and stream using an easy to use graphical user interface, there are 1000+ series and movies to
+                    choose from</p>
                 <footer>
-                    <a  href="#" class="button-new" style="margin-left: 30% ">Learn More</a>
+                    <a href="#" class="button-new">Learn More</a>
                 </footer>
             </article>
             <article>
                 <div class="image round">
-                    <img src="http://www.howtogeek.com/wp-content/uploads/2013/03/peer-to-peer-network.png" alt="Pic 02" />
+                    <img src="http://www.howtogeek.com/wp-content/uploads/2013/03/peer-to-peer-network.png"
+                         alt="Pic 02"/>
                 </div>
                 <header>
                     <h3 style="text-align: center ">Torrenting</h3>
                 </header>
-                <p>We organize and find the right torrents for you, put them in our database and allow you to stream directly from our app</p>
+                <p>We organize and find the right torrents for you, put them in our database and allow you to stream
+                    directly from our app</p>
                 <footer>
-                    <a href="#" style="margin-left: 30% " class="button-new">Learn More</a>
+                    <a href="#" class="button-new">Learn More</a>
                 </footer>
             </article>
         </div>
@@ -118,15 +68,9 @@
     <div class="inner">
 
         <div class="copyright">
-          <a>  &copy; Hypertube 2016 </a>.
+            <a>  &copy; Hypertube 2016 </a>.
         </div>
 
     </div>
 </footer>
 
-
-
-<!-- Scripts -->
-<!--<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script> -->

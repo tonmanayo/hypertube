@@ -1,4 +1,5 @@
-import {Component, } from "@angular/core";
+import {Component} from "@angular/core";
+import {BehaviorSubject} from "rxjs";
 
 @Component({
     selector: 'app-index',
@@ -7,21 +8,18 @@ import {Component, } from "@angular/core";
 })
 
 export class IndexComponent {
-    displayL = false;
-    displayS = false;
+    public displayL = new BehaviorSubject<boolean>(false);
+    public displayL$ = this.displayL.asObservable();
+    public displayS = new BehaviorSubject<boolean>(false);
+    public displayS$ = this.displayS.asObservable();
 
-    constructor(){
-        this.displayL = false;
-        this.displayS = false;
-    }
+    constructor(){}
 
     fShowL(){
-        this.displayL = true;
+        this.displayL.next(true);
     };
+
     fShowS(){
-        this.displayS = true;
-    }
-    fClose(){
-        this.displayL = false;
+        this.displayS.next(true);
     }
 }

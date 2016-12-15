@@ -20,8 +20,9 @@ import {ErrorService} from "./errors/error.service";
 //import {WelcomeService} from "./modules/welcome/welcome.service";
 import {IndexComponent} from "./index/index.component";
 import {ModalModule} from "ng2-bootstrap";
-import {SignupComponent} from "./auth/components/signup";
 import {IndexService} from "./index/index.service";
+import {LoginComponent} from "./index/login/login.component";
+import {SignupComponent} from "./index/signup/signup.component";
 
 @NgModule({
     declarations: [
@@ -33,10 +34,11 @@ import {IndexService} from "./index/index.service";
         AuthenticationComponent,
         HeaderComponent,
         LogoutComponent,
-        SignupComponent,
         SigninComponent,
         ErrorComponent,
         IndexComponent,
+        LoginComponent,
+        SignupComponent,
     ],
     imports: [
         BrowserModule,

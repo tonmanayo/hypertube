@@ -1,0 +1,88 @@
+/* modal */
+
+.backdrop {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+}
+
+.show {
+    display:block;
+    opacity: 1;
+}
+
+.fade {
+    animation: modalHide 0.5s linear ;
+    top: -1200px;
+}
+
+@keyframes modalHide {
+    0% {top: -100px;opacity: 1}
+    1%   {top: -200px;}
+    80%   {top: -500px;}
+    100% {top: -1200px;opacity: 0}
+}
+
+@keyframes modalDisplay {
+    0%   {display: none; top: 1200px}
+    1%   {display: block; top: 1200px; opacity: 0}
+    80%   {top: -200px;}
+    100% {top: -100px;opacity: 1}
+}
+
+@keyframes panelDisplay {
+    0%   {display: none; top: -2000px}
+    1%   {display: block; top: -2000px; opacity: 0}
+    100% {top: -100px;opacity: 1}
+}
+
+.modal-dialog {
+    margin: 0 auto;
+    margin-top: 20%;
+    position :relative;
+    animation: modalDisplay 0.5s linear ;
+    top: -100px;
+
+}
+
+.white{
+    color:#000;
+    background-color:#fff;
+}
+
+.btn-facebook {
+    color: #ffffff;
+    -webkit-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #2b4b90;
+}
+
+.btn-facebook:hover {
+    color: blue;
+    background-color: lightblue ;
+    border-color: black;
+}
+.btn-success {
+    background-color: green;
+}
+.btn-success:hover {
+    border-color: black;
+    background-color: lightgreen;
+    color: black;
+}
+
+.panel {
+    text-align:  center;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: -30vh;
+    position :relative;
+    animation: panelDisplay 0.7s linear ;
+
+}

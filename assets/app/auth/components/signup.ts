@@ -8,7 +8,7 @@ import { User} from "../../auth/user";
     templateUrl: './signup.html'
 })
 
-export class SignupComponent implements OnInit {
+export class SiwgnupComponent implements OnInit {
     myForm: FormGroup;
 
     constructor(private authService: AuthService) {}
