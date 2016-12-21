@@ -42,7 +42,6 @@ export class SignupComponent implements OnInit {
 
         this.displaySsub = this.indexComponent.displayS$.subscribe(isDisplay => this.displayS = isDisplay);
 
-
         var emailRegex = '^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$';
 
         this.myForm = new FormGroup({
