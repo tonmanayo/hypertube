@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "setup": "export PATH=./mongo/:$PATH",
-    "db": "./mongo/mongod --dbpath=\"$HOME/goinfre/data/db\"",
+    "setup": "export PATH=./mongoDB/:$PATH",
+    "db": "sudo mongod",
     "server1": "node ./server/bin/www",
     "server2": "node ./server2/bin/www",
     "build": "del public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch"
@@ -38,7 +38,10 @@
     "request": "^2.79.0",
     "rxjs": "^5.0.1",
     "serve-favicon": "~2.3.0",
-    "zone.js": "^0.6.25"
+    "zone.js": "^0.6.25",
+    "passport": "0.3.x",
+    "passport-42": "1.x",
+    "connect-ensure-login": "0.1.x"
   },
   "devDependencies": {
     "@types/core-js": "^0.9.35",
